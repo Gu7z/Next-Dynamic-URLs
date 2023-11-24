@@ -1,12 +1,15 @@
 "use client";
+import { useEffect, useState } from "react";
 
-import { useState } from "react";
+const ISSERVER = typeof window === "undefined";
 
 export default function Home() {
   const [currentPost, setCurrentPost] = useState("");
-  const [posts, setPosts] = useState<string[]>(
-    JSON.parse(localStorage.getItem("posts") || "[]")
-  );
+  const [posts, setPosts] = useState<string[]>([]);
+
+  useEffect(() => {
+    setPosts(JSON.parse(localStorage.getItem("posts") || "[]"));
+  }, []);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) =>
     setCurrentPost(e.target.value);
