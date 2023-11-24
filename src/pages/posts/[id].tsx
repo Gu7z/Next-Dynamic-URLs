@@ -1,4 +1,4 @@
-import { Metadata, ResolvingMetadata } from "next";
+import { Metadata } from "next";
 import { useRouter } from "next/router";
 
 export const metadata: Metadata = {
