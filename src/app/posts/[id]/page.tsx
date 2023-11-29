@@ -9,7 +9,8 @@ type Props = {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `Titulo do post ${params.id}`,
-    description: `Descrição gerada dinamicamente para o post de numero: ${params.id}`,
+    description: `Descrição gerada dinamicamente para o post: ${params.id}`,
+    openGraph: { images: ["https://picsum.photos/1200/630"] },
   };
 }
 
