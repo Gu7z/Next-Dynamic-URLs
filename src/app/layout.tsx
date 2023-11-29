@@ -5,8 +5,8 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Meu aplicativo local",
-  description: "Para test com Dynamic URLs",
+  title: "Urls dinamicas",
+  description: "Para testes URLs dinamicas",
 };
 
 export default function RootLayout({
