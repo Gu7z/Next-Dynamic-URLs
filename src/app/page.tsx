@@ -1,8 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
 
-const ISSERVER = typeof window === "undefined";
-
 export default function Home() {
   const [currentPost, setCurrentPost] = useState("");
   const [posts, setPosts] = useState<string[]>([]);
